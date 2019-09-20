@@ -6,13 +6,9 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
+public class PostmanClientTests {
     private PostmanClient postmanClient;
-    private static final Logger logger = Logger.getLogger(AppTest.class);
+    private static final Logger logger = Logger.getLogger(PostmanClientTests.class);
 
     @Before
     public void setUp() {

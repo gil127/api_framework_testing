@@ -10,7 +10,6 @@ import com.salesforce.http.clients.*;
 public class App 
 {
     public static void main( String[] args ) {
-        PostmanClient postmanClient = new PostmanClient();
-        int statusCode = RandomData.getRandomHttpStatusCode();
+        System.out.println("Hello World!");
     }
 }

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d3bfe1-a38a-4207-a02b-733a0fbcd7a6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/http/HttpHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/http/exceptions/PostmanException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/utils/RandomData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/utils/ThreadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PtsvClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/salesforce/PostmanParallelTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/salesforce/PtsvClientTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/salesforce/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/salesforce/PostmanClientTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/salesforce/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/salesforce/AppTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,34 +20,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="25" selection-start-line="3" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PostmanClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="20">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PtsvClient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PtsvClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseBody.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.1.1/rest-assured-4.1.1.jar!/io/restassured/response/ResponseBody.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -54,8 +55,8 @@
       <file leaf-file-name="HttpHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/HttpHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-end-line="8" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#86#87#0" expanded="true" />
@@ -65,44 +66,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/AppTest.java">
+      <file leaf-file-name="PostmanClientTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/PostmanClientTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="57">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostmanException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/exceptions/PostmanException.java">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="148">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding>
-                <element signature="e#149#150#0" expanded="true" />
-                <element signature="e#179#180#0" expanded="true" />
-                <element signature="e#245#246#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#232#233#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Matchers.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar!/org/hamcrest/Matchers.class">
+      <file leaf-file-name="PostmanParallelTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/PostmanParallelTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="482" column="55" selection-start-line="482" selection-start-column="55" selection-end-line="482" selection-end-column="55" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PtsvClientTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/PtsvClientTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="45" column="53" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="53" />
               <folding>
-                <element signature="e#17231#17232#0" expanded="true" />
-                <element signature="e#17288#17289#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13-beta-3/junit-4.13-beta-3.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -110,7 +129,7 @@
       <file leaf-file-name="RandomData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/utils/RandomData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="88">
               <caret line="12" selection-start-line="12" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,19 +137,6 @@
                 <element signature="e#255#256#0" expanded="true" />
                 <element signature="e#434#435#0" expanded="true" />
                 <element signature="e#494#495#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/utils/ThreadUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#266#267#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,6 +155,8 @@
     <findStrings>
       <find>pro</find>
       <find>response got http error code.</find>
+      <find>MAXIMUM_RUN_TIME</find>
+      <find>datoError response</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,9 +171,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/clients/PostmanClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/http/exceptions/PostmanException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/http/HttpHandler.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/salesforce/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PtsvClient.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/salesforce/PtsvClientTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/salesforce/PostmanParallelTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/salesforce/PostmanClientTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/App.java" />
       </list>
     </option>
   </component>
@@ -252,6 +264,15 @@
               <item name="api_framework_testing" type="b2602c69:ProjectViewProjectNode" />
               <item name="api_framework_testing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api_framework_testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_framework_testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -296,22 +317,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.multipleCallsForStatus">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.salesforce.App" />
-      <module name="api_framework_testing" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.salesforce.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PtsvClientTests">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="AppTest.multipleCallsForStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostmanClientTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api_framework_testing" />
       <extension name="coverage">
         <pattern>
@@ -322,9 +332,101 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.salesforce" />
-      <option name="MAIN_CLASS_NAME" value="com.salesforce.AppTest" />
-      <option name="METHOD_NAME" value="multipleCallsForStatus" />
+      <option name="MAIN_CLASS_NAME" value="com.salesforce.PostmanClientTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="PostmanParallelTests.toiletDatoerror1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api_framework_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salesforce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.salesforce" />
+      <option name="MAIN_CLASS_NAME" value="com.salesforce.PostmanParallelTests" />
+      <option name="METHOD_NAME" value="toiletDatoerror1" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="PostmanParallelTests.toiletDatoerror2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api_framework_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salesforce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.salesforce" />
+      <option name="MAIN_CLASS_NAME" value="com.salesforce.PostmanParallelTests" />
+      <option name="METHOD_NAME" value="toiletDatoerror2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="PostmanParallelTests.toiletDatoerror3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api_framework_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salesforce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.salesforce" />
+      <option name="MAIN_CLASS_NAME" value="com.salesforce.PostmanParallelTests" />
+      <option name="METHOD_NAME" value="toiletDatoerror3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="PtsvClientTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api_framework_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salesforce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.salesforce" />
+      <option name="MAIN_CLASS_NAME" value="com.salesforce.PtsvClientTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -373,13 +475,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.AppTest.multipleCallsForStatus" />
+      <item itemvalue="JUnit.PostmanParallelTests.toiletDatoerror1" />
+      <item itemvalue="JUnit.PostmanParallelTests.toiletDatoerror2" />
+      <item itemvalue="JUnit.PostmanParallelTests.toiletDatoerror3" />
+      <item itemvalue="JUnit.PtsvClientTests" />
+      <item itemvalue="JUnit.PostmanClientTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.multipleCallsForStatus" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.PtsvClientTests" />
+        <item itemvalue="JUnit.PostmanClientTests" />
+        <item itemvalue="JUnit.PostmanParallelTests.toiletDatoerror3" />
+        <item itemvalue="JUnit.PostmanParallelTests.toiletDatoerror2" />
+        <item itemvalue="JUnit.PostmanParallelTests.toiletDatoerror1" />
       </list>
     </recent_temporary>
   </component>
@@ -393,20 +501,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568991319930</updated>
-      <workItem from="1568991321282" duration="5609000" />
+      <workItem from="1568991321282" duration="9293000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_multipleCallsForStatus - 2019.09.20 at 21h 18m 50s.xml">
-      <configuration name="AppTest.multipleCallsForStatus" configurationId="JUnit" />
+    <history-entry file="PostmanParallelTests_iWasWrongTest - 2019.09.20 at 22h 15m 00s.xml">
+      <configuration name="PostmanParallelTests.iWasWrongTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_multipleCallsForStatus - 2019.09.20 at 21h 19m 58s.xml">
-      <configuration name="AppTest.multipleCallsForStatus" configurationId="JUnit" />
+    <history-entry file="PostmanParallelTests_iWasWrongTest - 2019.09.20 at 22h 16m 14s.xml">
+      <configuration name="PostmanParallelTests.iWasWrongTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostmanParallelTests_iWasWrongTest - 2019.09.20 at 22h 17m 06s.xml">
+      <configuration name="PostmanParallelTests.iWasWrongTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostmanParallelTests_iWasWrongTest - 2019.09.20 at 22h 18m 20s.xml">
+      <configuration name="PostmanParallelTests.iWasWrongTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostmanParallelTests_iWasWrongTest - 2019.09.20 at 22h 18m 56s.xml">
+      <configuration name="PostmanParallelTests.iWasWrongTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostmanParallelTests_toiletDatoerror1 - 2019.09.20 at 22h 20m 48s.xml">
+      <configuration name="PostmanParallelTests.toiletDatoerror1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostmanParallelTests_toiletDatoerror2 - 2019.09.20 at 22h 22m 20s.xml">
+      <configuration name="PostmanParallelTests.toiletDatoerror2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostmanParallelTests_toiletDatoerror3 - 2019.09.20 at 22h 22m 41s.xml">
+      <configuration name="PostmanParallelTests.toiletDatoerror3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PtsvClientTests - 2019.09.20 at 22h 24m 14s.xml">
+      <configuration name="PtsvClientTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PtsvClientTests - 2019.09.20 at 22h 25m 45s.xml">
+      <configuration name="PtsvClientTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5609000" />
+    <option name="totallyTimeSpent" value="9293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="715" extended-state="0" />
@@ -423,7 +555,7 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47249192" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32847896" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32524273" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -450,26 +582,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java</url>
-          <line>2</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/salesforce/App.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -543,6 +656,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.1.1/rest-assured-4.1.1.jar!/io/restassured/response/ValidatableResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar!/org/hamcrest/Matchers.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -554,9 +674,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/exceptions/PostmanException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#149#150#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/utils/RandomData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="88">
           <caret line="12" selection-start-line="12" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -568,37 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.1.1/rest-assured-4.1.1.jar!/io/restassured/response/ValidatableResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/exceptions/PostmanException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#149#150#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/HttpHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-end-line="8" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#86#87#0" expanded="true" />
@@ -607,26 +713,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13-beta-3/junit-4.13-beta-3.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.1.1/rest-assured-4.1.1.jar!/io/restassured/response/ResponseBody.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/PtsvClientTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/AppTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="148">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/PostmanParallelTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/salesforce/PostmanClientTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PostmanClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/http/clients/PtsvClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
           </folding>
         </state>
       </provider>
