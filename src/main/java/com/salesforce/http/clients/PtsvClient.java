@@ -11,7 +11,6 @@ public class PtsvClient {
     private static final Logger logger = Logger.getLogger(PtsvClient.class);
 
     public PtsvClient() {
-        RestAssured.baseURI = URL;
     }
 
     public String datoError(String n) {
@@ -21,6 +20,6 @@ public class PtsvClient {
         if (n != null) {
             requestSpecification.pathParam("n", n);
         }
-        return requestSpecification.post(path).body().asString();
+        return requestSpecification.baseUri(URL).post(path).body().asString();
     }
 }

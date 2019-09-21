@@ -43,21 +43,27 @@ public class PostmanParallelTests extends BaseTests {
 
     @Test
     public void submitTaskAsyncCalls() throws ExecutionException, InterruptedException {
-        String[] result = new String[4];
-        String[] requestParams = {"http://ptsv2.com/t/datoerror/post", "http://ptsv2.com/t/datoerror1/post",
+        String[] postRequests = {"http://ptsv2.com/t/datoerror/post", "http://ptsv2.com/t/datoerror1/post",
                 "http://ptsv2.com/t/datoerror2/post", "http://ptsv2.com/t/datoerror3/post"};
+        String[] getRequests = {"https://postman-echo.com/delay/10"};
+        String[] postResults = new String[postRequests.length];
+        String[] getResults = new String[getRequests.length];
         AsyncHttpClient client = Dsl.asyncHttpClient();
         List<ListenableFuture<Object>> executables = new ArrayList<>();
 
-        for (int i = 0; i < requestParams.length; i++) {
-            executables.add(client.preparePost(requestParams[i]).execute(asyncStringOrderHandler(result, i)));
+        for (int i = 0; i < getRequests.length; i++) {
+            executables.add(client.prepareGet(getRequests[i]).execute(asyncStringOrderHandler(getResults, i)));
+        }
+
+        for (int i = 0; i < postRequests.length; i++) {
+            executables.add(client.preparePost(postRequests[i]).execute(asyncStringOrderHandler(postResults, i)));
         }
 
         for (int i = 0; i < executables.size(); i++) {
             executables.get(0).get();
         }
 
-        logger.info(buildStringFromArray(result));
+        logger.info(buildStringFromArrays(postResults, getResults));
     }
 
     private AsyncHandler<Object> asyncStringOrderHandler(String[] result, int i) {
@@ -72,10 +78,13 @@ public class PostmanParallelTests extends BaseTests {
         return asyncCompletionHandler;
     }
 
-    private String buildStringFromArray(String[] arr) {
+    private String buildStringFromArrays(String[] a, String[] b) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
+        for (int i = 0; i < a.length; i++) {
+            sb.append(a[i]);
+        }
+        for (int i = 0; i < b.length; i++) {
+            sb.append(b[i]);
         }
 
         return sb.toString();

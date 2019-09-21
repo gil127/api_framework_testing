@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PostmanClientTests extends BaseTests{
+public class PostmanClientTests extends BaseTests {
     private PostmanClient postmanClient;
     private static final Logger logger = Logger.getLogger(PostmanClientTests.class);
 

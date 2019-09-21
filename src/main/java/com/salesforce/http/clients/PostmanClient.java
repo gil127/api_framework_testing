@@ -16,14 +16,12 @@ public class PostmanClient {
     private static final Logger logger = Logger.getLogger(PostmanClient.class);
     private static final long MAXIMUM_RUN_TIME = 10_000L;
 
-    public PostmanClient() {
-        RestAssured.baseURI = URL;
-    }
+    public PostmanClient() {}
 
     public void status(int statusCode) {
         logger.info("sending status request");
         String path = "status/{status_code}";
-        Response response = RestAssured.given().pathParam("status_code", statusCode).get(path);
+        Response response = RestAssured.given().pathParam("status_code", statusCode).baseUri(URL).get(path);
         Assert.assertEquals(response.getStatusCode(), statusCode);
         response.then().time(lessThan(MAXIMUM_RUN_TIME));
         HttpHandler.handleErrorsCode(statusCode);
@@ -32,13 +30,13 @@ public class PostmanClient {
     public void delay(int delayTime) {
         logger.info("sending delay request");
         String path = "delay/{delay_time}";
-        RestAssured.given().pathParam("delay_time", delayTime).get(path).then().statusCode(HTTP_OK)
+        RestAssured.given().pathParam("delay_time", delayTime).baseUri(URL).get(path).then().statusCode(HTTP_OK)
                 .and().time(lessThan(MAXIMUM_RUN_TIME));
     }
 
     public String delayWithBody(int delayTime) {
         logger.info("sending delay request");
         String path = "delay/{delay_time}";
-        return RestAssured.given().pathParam("delay_time", delayTime).get(path).getBody().prettyPrint();
+        return RestAssured.given().pathParam("delay_time", delayTime).baseUri(URL).get(path).getBody().prettyPrint();
     }
 }
