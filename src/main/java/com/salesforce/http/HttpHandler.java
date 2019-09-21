@@ -16,7 +16,7 @@ public class HttpHandler {
         if (statusCode >= 400) {
             errMessage = String.format("response got http error code. code: %d", statusCode);
             logger.error(errMessage);
-            //throw new PostmanException(errMessage);
+            throw new PostmanException(errMessage);
         }
     }
 }

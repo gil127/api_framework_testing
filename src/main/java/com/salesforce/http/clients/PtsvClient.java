@@ -11,10 +11,6 @@ public class PtsvClient {
     private static final String URL = "http://ptsv2.com/";
     private static final Logger logger = Logger.getLogger(PtsvClient.class);
 
-    static {
-        BasicConfigurator.configure();
-    }
-
     public PtsvClient() {
         RestAssured.baseURI = URL;
     }

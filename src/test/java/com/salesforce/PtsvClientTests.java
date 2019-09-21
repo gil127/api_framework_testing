@@ -6,12 +6,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PtsvClientTests {
+public class PtsvClientTests extends BaseTests {
     private PtsvClient ptsvClient;
     private static final Logger logger = Logger.getLogger(PtsvClientTests.class);
 
     @Before
     public void setUp() {
+        super.setUp();
         ptsvClient = new PtsvClient();
     }
 

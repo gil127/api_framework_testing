@@ -21,10 +21,6 @@ public class PostmanClient {
         RestAssured.baseURI = URL;
     }
 
-    static {
-        BasicConfigurator.configure();
-    }
-
     public void status(int statusCode) {
         logger.info("sending status request");
         String path = "status/{status_code}";
