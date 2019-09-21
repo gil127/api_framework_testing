@@ -3,7 +3,6 @@ package com.salesforce.http.clients;
 import com.salesforce.http.HttpHandler;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
@@ -35,5 +34,11 @@ public class PostmanClient {
         String path = "delay/{delay_time}";
         RestAssured.given().pathParam("delay_time", delayTime).get(path).then().statusCode(HTTP_OK)
                 .and().time(lessThan(MAXIMUM_RUN_TIME));
+    }
+
+    public String delayWithBody(int delayTime) {
+        logger.info("sending delay request");
+        String path = "delay/{delay_time}";
+        return RestAssured.given().pathParam("delay_time", delayTime).get(path).getBody().prettyPrint();
     }
 }

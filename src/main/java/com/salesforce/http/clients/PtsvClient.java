@@ -3,7 +3,6 @@ package com.salesforce.http.clients;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 
